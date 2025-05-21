@@ -1,5 +1,0 @@
-- ensure everything works when you run `tox`
-- use `black` to format the code
-- provide documentation to be added to the wiki when relevant
-- provide some *tests* when possible
-- ensure you read https://github.com/hyprland-community/pyprland/wiki/Development

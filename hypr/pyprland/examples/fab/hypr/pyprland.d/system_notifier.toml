@@ -1,7 +1,0 @@
-pyprland.plugins = ["system_notifier"]
-
-[[system_notifier.sources]]
-command = "sudo journalctl -fx"
-parser = "journal"
-
-
