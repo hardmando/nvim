@@ -1,6 +1,5 @@
 * {
     font-family: "JetBrainsMono", monospace;
-    font-size: 14px;
     /*color: #00ff00;  Green on black, classic TUI */
     background-color: #000000;
     border: none;
@@ -9,10 +8,11 @@
 
 #workspaces button{
     border: none;
-    color: #6536ff;
+    color: #9373ff;
     background: #000000;
     padding: 0px 10px;
     opacity: 0.5;
+    font-size: 16px;
 }
 
 #workspaces button.active {
@@ -27,11 +27,16 @@
     border-radius: 0px;
 }
 
-#clock, #cpu, #memory, #pulseaudio, #battery, #network, #power, #window, #temperature {
+#clock, #cpu, #memory, #pulseaudio, #battery, #network, #power, #window, #temperature, #custom-uptime {
+    font-size: 14px;
     padding: 0 0;
     font-weight: 900;
     color: #de0b55;
+    margin-bottom: -20px;
 }
 
+#uptime {
+    padding-right: 5px;
+}
 
 

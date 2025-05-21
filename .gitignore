@@ -1,12 +1,14 @@
 btop/
-'Code - OSS'/
+'Code - OSS'
 dconf/
 Electron/
 glib-2.0/
+go/
+go/telemetry/local/
 google-chrome/
 gtk-3.0/
 JetBrains/
-mineapps.list
+mimeapps.list
 mpv/
 NuGet/
 pulse/
@@ -15,5 +17,6 @@ unity3d/
 unityhub/
 user-dirs.dirs
 user-dirs.locale
+xcfe4/
 yay/
-ytui-music/
+ytui_music/

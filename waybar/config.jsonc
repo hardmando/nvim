@@ -20,7 +20,8 @@
         "cpu",
         "memory",
         "temperature",
-        "clock"
+        "clock",
+	"custom/uptime"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -28,6 +29,12 @@
         "all-outputs": false,
         "on-click": "activate",
         "format": "▰[ {name} ]▰"
+    },
+
+    "custom/uptime": {
+	"interval": 60,
+	"format": "[ UPTIME:{text} ]━┓",
+	"exec": "uptime | grep -P -i -oh '((  [0-9]+(:[0-9]+)))'"
     },
 
     "temperature": {
@@ -44,8 +51,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": " <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt> ",
-	"format": "[ {:%H:%M} ]━┓",
-        "format-alt": "{:%Y-%m-%d}"
+	"format": "[ {:%H:%M} ]┳┳",
+        "format-alt": "[ {:%Y-%m-%d} ]┳┳"
     },
     "cpu": {
         "format": "[ CPU {usage}% ]┳┳"
