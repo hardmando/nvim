@@ -21,22 +21,27 @@
     font-weight: 900;
     color: #de0b55;
     opacity: 1;
+    text-shadow: 0 0 5px #de0b55;
 }
 
 #workspaces button:hover {
     border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 #clock, #cpu, #memory, #pulseaudio, #battery, #network, #power, #window, #temperature, #custom-uptime {
     font-size: 14px;
-    padding: 0 0;
     font-weight: 900;
     color: #de0b55;
     margin-bottom: -20px;
+    text-shadow: 0 0 5px #de0b55;
 }
 
-#uptime {
-    padding-right: 5px;
+#network, #cpu, #memory, #temperature, #clock {
+    padding-right: 10px;
 }
 
-
+.modules-right {
+    padding-right: 1px;
+}

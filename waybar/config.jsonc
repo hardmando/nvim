@@ -11,18 +11,19 @@
     ],
     "modules-center": [
 	"hyprland/workspaces",
+	"custom/globe"
     ],
+    
     "modules-right": [
-        "mpd",
-        "pulseaudio",
         "network",
         "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
         "clock",
-	"custom/uptime"
+	    "custom/uptime"
     ],
+    
     // Modules configuration
     "hyprland/workspaces": {
 	"disable-scroll": true,
@@ -31,18 +32,25 @@
         "format": "▰[ {name} ]▰"
     },
 
+    "custom/globe": {
+        "format": "{}",
+        "interval": 1,
+        "exec": "globe -s",
+        "return-type": "plain"
+    },
+
     "custom/uptime": {
 	"interval": 60,
-	"format": "[ UPTIME:{text} ]━┓",
-	"exec": "uptime | grep -P -i -oh '((  [0-9]+(:[0-9]+)))'"
+	"format": "┏━[ UPTIME:{text} ]━┓",
+	"exec": "uptime | grep -P -i -oh '(( [0-9]+(:[0-9]+),))' | grep -P -i -oh '(([0-9]+(:[0-9]+)))'"
     },
 
     "temperature": {
-	"format": "[ {temperatureC}C ]┳┳"
+	    "format": "┏━[ {temperatureC}C ]━┓"
     },
 
     "hyprland/window": {
-	"format": "╔╬[ {title} ]╬╗"
+	"format": "┏━[ {title} ]━┓"
     },
     "tray": {
         // "icon-size": 21,
@@ -51,19 +59,19 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": " <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt> ",
-	"format": "[ {:%H:%M} ]┳┳",
-        "format-alt": "[ {:%Y-%m-%d} ]┳┳"
+	"format": "┏━[ {:%H:%M} ]━┓",
+        "format-alt": "┏━[ {:%Y-%m-%d} ]━┓"
     },
     "cpu": {
-        "format": "[ CPU {usage}% ]┳┳"
+        "format": "┏━[ CPU {usage}% ]━┓"
     },
     "memory": {
-        "format": "[ RAM {used: 0.1f}G ]┳┳"
+        "format": "┏━[ RAM {used: 0.1f}G ]━┓"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "┏━[ {ipaddr}/{cidr} ]┳┳",
+        "format-ethernet": "┏━[ {ipaddr}/{cidr} ]━┓",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
