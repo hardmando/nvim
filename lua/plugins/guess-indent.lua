@@ -1,3 +1,3 @@
 return {
-	'NMAC/guess-indent.nvim'
+	'NMAC427/guess-indent.nvim'
 }

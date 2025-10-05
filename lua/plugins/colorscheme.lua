@@ -1,9 +1,8 @@
 return {
-    'dgox16/oldworld.nvim',
-    event = 'VimEnter',
-    opts = { variant = 'oled' },
-    config = function()
-      require('oldworld').setup { variant = 'oled' }
-      vim.cmd.colorscheme 'oldworld'
-    end,
+  'dasupradyumna/midnight.nvim',
+  event = 'VimEnter',
+  config = function()
+    require('midnight').setup {}
+    vim.cmd.colorscheme 'midnight'
+  end,
 }

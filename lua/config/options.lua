@@ -1,5 +1,5 @@
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = false
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -25,13 +25,23 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = false
 vim.o.scrolloff = 10
 vim.o.confirm = true
+
+vim.keymap.set('n', 'M-<up><CR>', ':resize +1', { silent = true, noremap = true })
+vim.keymap.set('n', 'M-<down><CR>', ':resize -1', { silent = true, noremap = true })
+vim.keymap.set('n', 'M-<right><CR>', ':vertical resize +1', { silent = true, noremap = true })
+vim.keymap.set('n', 'M-<down><CR>', ':vertical resize -1', { silent = true, noremap = true })
+vim.keymap.set('n', '<M-.>', ':BufferNext<CR>', { desc = 'Next Tab' })
+vim.keymap.set('n', '<M-,>', ':BufferPrevious<CR>', { desc = 'Previous Tab' })
+vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { silent = true })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+-- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+-- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+-- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+-- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('n', '<leader>"', ':split<CR>', { desc = 'Split window horizontaly' })
+vim.keymap.set('n', '<leader>%', ':vsplit<CR>', { desc = 'Split window vertically' })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
